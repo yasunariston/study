@@ -11,17 +11,16 @@ for iter = 1:num_iters
 
     % ====================== YOUR CODE HERE ======================
     % Instructions: Perform a single gradient step on the parameter vector
-    %               theta. 
+     %               theta. 
     %
     % Hint: While debugging, it can be useful to print out the values
     %       of the cost function (computeCost) and gradient here.
     %
 
-
-
-
-
-
+    temp1 = theta(1) - (alpha / m * ((theta(1) * X(:, 1) + theta(2) * X(:, 2) - y)' * X(:, 1)));
+    temp2 = theta(2) - (alpha / m * ((theta(1) * X(:, 1) + theta(2) * X(:, 2) - y)' * X(:, 2)));
+    theta(1) = temp1;
+    theta(2) = temp2;
 
     % ============================================================
 
